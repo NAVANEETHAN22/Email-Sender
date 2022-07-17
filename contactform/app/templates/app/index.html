@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EMAIL SENDER </title>
+	<style type="text/css">
+		body
+		{
+			padding: 0;
+			margin: 0;
+			background: #00ff5560;
+		}
+		section
+			{
+            border: 15px solid rgba(21, 66, 212, 0.699);
+			height: 95vh;
+			}
+		
+		textarea{
+			background-color: #ffffff;
+			color: #666666;
+			padding: 1em;
+			border-radius: 10px;
+			border: 2px solid transparent;
+			outline: none;
+			font-family: 'Heebo', sans-serif;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 1.4;
+			width: 350px;
+			margin: 10px 300px;
+			height: 100px;
+			transition: all 0.2s;
+		</style>
+		
+</head>
+
+<body>
+	<form>
+		<section>
+		<table style="padding: 70px;">
+		<table style="width:70%">
+			
+			<h1 style="text-align:center;">CONTACT FORM</h1>
+            <h3 style="text-align:center;" >ENTER HOST MAIL ID AND PASSWORD IN settings.py FILE AND ENTER RECIVER MAIL ID IN views.py FILE</h3>
+			<form method="post" action="{% url 'index' %}">
+		    {% csrf_token %}
+			<textarea name="message" placeholder="ENTER A MESSAGE...."></textarea>
+				<input type="submit" style="margin:10px 600px" />
+			</form>
+			
+	</form>
+</body>
+
+</html>
